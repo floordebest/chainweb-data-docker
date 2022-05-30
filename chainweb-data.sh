@@ -2,10 +2,10 @@
 # chainweb-data init script
 
 function node_await() {
- check=$(curl -SsL -k -m 15 https://104.248.86.98:8080/chainweb/0.0/development/cut | jq .height)
+ check=$(curl -SsL -k -m 15 http://104.248.86.98:8080/chainweb/0.0/development/cut | jq .height)
  if [[ "$check" == "" ]]; then
    until [ $check != "" ] ; do
-     check=$(curl -SsL -k -m 15 https://104.248.86.98:8080/chainweb/0.0/development/cut | jq .height)
+     check=$(curl -SsL -k -m 15 http://104.248.86.98:8080/chainweb/0.0/development/cut | jq .height)
      echo -e "Waiting for KDA node..."
      sleep 200
    done
