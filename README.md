@@ -1,11 +1,11 @@
 ## Kadena chainweb-data for kadena node
 ### Pull latest image
 ```shell script
-$ docker pull runonflux/kadena-chainweb-data
+$ docker pull floordebest/kadena-chainweb-data
 ```
 ### Deploy container
 ```shell script
-$ docker run -d -p 8888:8888 --restart=always -v /local/path:/var/lib/postgresql/data --name "KadenaChainWebData" runonflux/kadena-chainweb-data
+$ docker run -d -p 8888:8888 --restart=always -v /local/path:/var/lib/postgresql/data --name "KadenaChainWebData" floordebest/kadena-chainweb-data
 ```
 ### Chainweb-data complex solution
 - server 
